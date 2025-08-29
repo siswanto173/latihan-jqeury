@@ -22,4 +22,12 @@ $(document).ready(function () {
   $(".boxes").mouseenter(function () {
     $(this).css("background-color", "yellow");
   });
+
+  //   get dan set nilai
+  $("form").submit(function () {
+    var isiText = $("#inputText").val();
+    $("h1").text(isiText);
+    // mencegah sifat cepat realod
+    event.preventDefault();
+  });
 });
